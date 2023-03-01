@@ -1,0 +1,64 @@
+.button {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+}
+
+.button:hover {
+  transition-duration: 0.4s;
+}
+
+.button-primary:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #2980b9, 0 1px 2px 0 black;
+}
+
+.button-primary:hover {
+  background: white;
+  border-color: #3498db;
+  color: #2980b9;
+}
+
+.button-primary {
+  background: #3498db;
+  border-color: #2980b9;
+  color: white;
+}
+
+.button-disabled {
+  background: #95a5a6;
+  border-color: #7f8c8d;
+  color: white;
+}
+
+.button-positive {
+  background: #2ecc71;
+  border-color: #27ae60;
+  color: white;
+}
+
+.button-positive:hover {
+  background: white;
+  color: #27ae60;
+  border-color: #2ecc71;
+}
+
+.button-positive:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #27ae60, 0 1px 2px 0 black;
+}
+
+.button-negative {
+  background: #e74c3c;
+  border-color: #c0392b;
+  color: white;
+}
+
+.button-negative:hover {
+  background: white;
+  color: #e74c3c;
+  border-color: #c0392b;
+}
+
+.button-negative:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #c0392b, 0 1px 2px 0 black;
+}
