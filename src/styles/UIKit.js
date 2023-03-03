@@ -18,4 +18,20 @@ export default {
       border-radius: 0px 0px 0.5em 0.5em;
     `,
   },
+  Switch: {
+    SwitchBase: styled.div`
+      border: 1px solid #d3d3d3;
+      width: fit-content;
+      border-radius: 0.5em;
+      overflow: hidden;
+    `,
+    SwitchItem: styled.button`
+      background: ${(props) => (props.selected ? "#3498db" : "white")};
+      color: ${(props) => (props.selected ? "white" : "black")};
+      font-weight: bold;
+      border: none;
+      border-left: 1px solid #d3d3d3;
+      padding: 1em;
+    `,
+  },
 };
