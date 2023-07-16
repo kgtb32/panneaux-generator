@@ -15,7 +15,9 @@ export default function Button(infos: ButtonProps) {
 
   return (
     <button
-      className={`button w-fit-content user-select-none ${colorClass}`}
+      className={`button w-fit-content user-select-none ${colorClass} ${
+        infos?.className ?? ""
+      }`}
       onClick={infos.onClick}
       disabled={infos.disabled}
     >

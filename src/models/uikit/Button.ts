@@ -6,4 +6,5 @@ export interface Button {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   disabled?: boolean;
   color?: ColorsType;
+  className?: string;
 }
