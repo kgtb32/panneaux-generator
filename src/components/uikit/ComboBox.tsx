@@ -7,6 +7,7 @@ import {
 import UIKitStyle from "../../styles/UIKit";
 
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import { nanoid } from "nanoid";
 
 export default function ComboBox(props: ComboBoxProps) {
   const [displaySubItems, setDisplaySubItems] = useState(false);
@@ -17,7 +18,10 @@ export default function ComboBox(props: ComboBoxProps) {
   const selectDivRef: any = useRef(null);
 
   return (
-    <UIKitStyle.ComboBox.FakeButton onBlur={() => setDisplaySubItems(false)}>
+    <UIKitStyle.ComboBox.FakeButton
+      onBlur={() => setDisplaySubItems(false)}
+      className={props.className}
+    >
       <div
         className={`select d-flex w-100 p-0 justify-content-between ${
           displaySubItems ? "select-focus " : ""
@@ -41,7 +45,7 @@ export default function ComboBox(props: ComboBoxProps) {
         >
           {props.items.map((item) => (
             <div
-              key={item.name}
+              key={nanoid(128)}
               className="w-100 select-item text-center"
               onClick={() => {
                 setDisplaySubItems(false);
