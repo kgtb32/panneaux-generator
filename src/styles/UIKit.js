@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export default {
+  Line: {
+    BaseLine: styled.div`
+      border-bottom: 1px solid lightgray;
+      width: 100%;
+      padding-top: 0.5em;
+    `,
+  },
   ComboBox: {
     FakeButton: styled.button`
       background: none;
