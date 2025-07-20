@@ -1,0 +1,84 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+
+.sign-parent {
+  border: 2px solid;
+  border-radius: 1em;
+  padding: 1px;
+}
+
+.base-sign {
+  border: 2px solid;
+  border-radius: 1em;
+  padding: 2px;
+}
+
+.sign-type-a {
+  background-color: $base-sign-autoroute-bg;
+  color: $base-sign-autoroute-fg;
+  border-color: $base-sign-autoroute-fg;
+}
+
+.sign-type-a-base {
+  border-color: $base-sign-autoroute-bg;
+  background: $base-sign-autoroute-fg;
+}
+
+.sign-type-n {
+  background-color: $base-sign-nationale-bg;
+  color: $base-sign-nationale-fg;
+  border-color: $base-sign-nationale-fg;
+}
+
+.sign-type-n-base {
+  border-color: $base-sign-nationale-bg;
+  background: $base-sign-nationale-fg;
+}
+
+.sign-type-ip {
+  background-color: $base-sign-ip-bg;
+  color: $base-sign-ip-fg;
+  border-color: $base-sign-ip-fg;
+}
+
+.sign-type-ip-base {
+  border-color: $base-sign-ip-bg;
+  background: $base-sign-ip-fg;
+}
+
+.sign-type-ic {
+  background-color: $base-sign-ic-bg;
+  color: $base-sign-ic-fg;
+  border-color: $base-sign-ic-fg;
+}
+
+.sign-type-ic-base {
+  border-color: $base-sign-ic-bg;
+  background: $base-sign-ic-fg;
+}
+
+.sign-type-li {
+  background-color: $base-sign-li-bg;
+  color: $base-sign-li-fg;
+  border-color: $base-sign-li-fg;
+}
+
+.sign-type-li-base {
+  border-color: $base-sign-li-bg;
+  background: $base-sign-li-fg;
+}
+
+.sign-size-s {
+  width: $sign-s-width;
+  height: $sign-s-height;
+}
+
+.sign-size-m {
+  width: $sign-m-width;
+  height: $sign-m-height;
+}
+
+.sign-size-l {
+  width: $sign-l-width;
+  height: $sign-l-height;
+}
