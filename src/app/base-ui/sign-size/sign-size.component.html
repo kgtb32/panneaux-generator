@@ -1,0 +1,9 @@
+<p>Taille du panneau :</p>
+<p-selectbutton
+  [options]="options"
+  [formControl]="this.signSizeControl"
+  (onChange)="this.updateSignSize()"
+  optionLabel="label"
+  optionValue="value"
+  aria-labelledby="basic"
+/>

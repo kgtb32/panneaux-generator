@@ -1,0 +1,9 @@
+<p>Type du panneau :</p>
+<p-selectbutton
+  [options]="options"
+  [formControl]="this.signTypeControl"
+  (onChange)="this.updateSignType()"
+  optionLabel="label"
+  optionValue="value"
+  aria-labelledby="basic"
+/>

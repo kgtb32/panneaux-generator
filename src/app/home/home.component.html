@@ -1,1 +1,12 @@
 <app-header></app-header>
+<div class="d-flex">
+  <div class="flex-1 overflow-auto">
+    <app-base-sign [type]="sign.type" [size]="sign.size">
+      <p>base-sign works!</p>
+    </app-base-sign>
+  </div>
+  <app-sign-configure-menu
+    [sign]="sign"
+    (signChanged)="sign = $event"
+  ></app-sign-configure-menu>
+</div>

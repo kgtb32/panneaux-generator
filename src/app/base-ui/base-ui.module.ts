@@ -5,11 +5,20 @@ import { Button } from 'primeng/button'
 import { Toolbar } from 'primeng/toolbar'
 import { Badge } from 'primeng/badge'
 import { Menu } from 'primeng/menu'
-import { MenubarModule } from 'primeng/menubar'
+import { MenubarModule } from 'primeng/menubar';
+import { SignConfigureMenuComponent } from './sign-configure-menu/sign-configure-menu.component';
+import { SignSizeComponent } from './sign-size/sign-size.component'
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SignTypeComponent } from './sign-type/sign-type.component';
+
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SignConfigureMenuComponent,
+    SignSizeComponent,
+    SignTypeComponent
   ],
   imports: [
     CommonModule,
@@ -17,10 +26,13 @@ import { MenubarModule } from 'primeng/menubar'
     Toolbar,
     Badge,
     Menu,
-    MenubarModule
+    MenubarModule,
+    SelectButtonModule,
+    ReactiveFormsModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SignConfigureMenuComponent
   ]
 })
 export class BaseUiModule { }
