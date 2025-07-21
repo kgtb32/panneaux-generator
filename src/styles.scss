@@ -8,6 +8,10 @@
 
 .p-0 {
   padding: 0px !important;
+
+  .p-panel-content {
+    padding: 0px !important;
+  }
 }
 
 .p-1 {
@@ -26,6 +30,18 @@
   flex: 1;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+.gap-s {
+  gap: 0.25em;
+}
+
+.gap-m {
+  gap: 0.5em;
+}
+
 * {
   font-family: "Open Sans", sans-serif;
 }
@@ -40,4 +56,37 @@
 
 .w-fit-content {
   width: fit-content;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.tabs-vertical {
+  .p-tabs {
+    flex-direction: row;
+  }
+
+  .p-tablist-tab-list {
+    flex-direction: column;
+  }
+
+  .p-tablist-active-bar {
+    display: none;
+  }
+
+  .p-tablist-next-button {
+    display: none;
+  }
+}
+
+.tabs-mini {
+  .p-tab {
+    padding: 0.5em;
+  }
+
+  .p-tabpanels {
+    padding: 0px !important;
+  }
 }

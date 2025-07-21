@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Sign, SignType, signTypes } from '../../models/sign';
+import { SignType, signTypes } from '../../models/sign';
 
 @Component({
   selector: 'app-sign-type',
@@ -9,7 +9,10 @@ import { Sign, SignType, signTypes } from '../../models/sign';
 })
 export class SignTypeComponent {
   @Input({ required: true })
-  sign!: Sign;
+  type!: SignType;
+
+  @Input()
+  showLabel: boolean = true;
 
   @Output()
   signTypeChanged = new EventEmitter<SignType>();
@@ -19,7 +22,7 @@ export class SignTypeComponent {
   public readonly options = signTypes.map(size => ({ label: size, value: size }))
 
   public ngOnInit(): void {
-    this.signTypeControl = new FormControl<SignType>(this.sign.type, [Validators.required])
+    this.signTypeControl = new FormControl<SignType>(this.type, [Validators.required])
   }
 
   public updateSignType() {

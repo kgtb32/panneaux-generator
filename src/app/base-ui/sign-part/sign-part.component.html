@@ -1,0 +1,33 @@
+<p>Parties de panneau</p>
+<div class="tabs-vertical tabs-mini">
+  @if (sign.parts.length === 0) {
+  <p>Aucune partie de panneau.</p>
+  }
+  <p-tabs value="0">
+    <p-tablist>
+      @for (part of sign.parts; track $index) {
+      <p-tab [value]="$index">#{{ $index }}</p-tab>
+      }
+      <p-button
+        (onClick)="addSignPart()"
+        icon="pi pi-plus"
+        [raised]="true"
+        [text]="true"
+      />
+    </p-tablist>
+    <p-tabpanels>
+      @for (part of sign.parts; track $index) {
+      <p-tabpanel [value]="$index">
+        <p-panel header="Partie #{{ $index }}" class="m-0" styleClass="p-0">
+          <div class="d-flex gap-s">
+            <p class="my-auto">Identificateurs de route :</p>
+          </div>
+          <app-identification
+            [identifications]="part.identification"
+          ></app-identification>
+        </p-panel>
+      </p-tabpanel>
+      }
+    </p-tabpanels>
+  </p-tabs>
+</div>

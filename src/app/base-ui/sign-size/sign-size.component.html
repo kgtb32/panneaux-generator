@@ -1,9 +1,13 @@
+@if (showLabel) {
 <p>Taille du panneau :</p>
-<p-selectbutton
+}
+<p-select
   [options]="options"
+  styleClass="w-100"
   [formControl]="this.signSizeControl"
   (onChange)="this.updateSignSize()"
   optionLabel="label"
   optionValue="value"
   aria-labelledby="basic"
-/>
+>
+</p-select>

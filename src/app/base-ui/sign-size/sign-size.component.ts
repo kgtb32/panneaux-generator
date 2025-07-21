@@ -9,7 +9,10 @@ import { FormControl, Validators } from '@angular/forms'
 })
 export class SignSizeComponent implements OnInit {
   @Input({ required: true })
-  sign!: Sign;
+  size!: SignSize;
+
+  @Input()
+  showLabel: boolean = true;
 
   @Output()
   sizeChanged = new EventEmitter<SignSize>();
@@ -19,7 +22,7 @@ export class SignSizeComponent implements OnInit {
   public readonly options = signSizes.map(size => ({ label: size, value: size }))
 
   public ngOnInit(): void {
-    this.signSizeControl = new FormControl<SignSize>(this.sign.size, [Validators.required])
+    this.signSizeControl = new FormControl<SignSize>(this.size, [Validators.required])
   }
 
   public updateSignSize() {

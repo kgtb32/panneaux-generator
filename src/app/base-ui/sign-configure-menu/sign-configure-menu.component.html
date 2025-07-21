@@ -1,5 +1,11 @@
-<app-sign-size [sign]="sign" (sizeChanged)="sign.size = $event"></app-sign-size>
-<app-sign-type
-  [sign]="sign"
-  (signTypeChanged)="sign.type = $event"
-></app-sign-type>
+<div style="max-width: 20em">
+  <app-sign-size
+    [size]="sign.size"
+    (sizeChanged)="sign.size = $event"
+  ></app-sign-size>
+  <app-sign-type
+    [type]="sign.type"
+    (signTypeChanged)="sign.type = $event"
+  ></app-sign-type>
+  <app-sign-part [sign]="sign"></app-sign-part>
+</div>
