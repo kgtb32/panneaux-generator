@@ -12,7 +12,7 @@ export class SignSizeComponent implements OnInit {
   sign!: Sign;
 
   @Output()
-  signInfosChanged = new EventEmitter<Sign>();
+  sizeChanged = new EventEmitter<SignSize>();
 
   public signSizeControl!: FormControl<SignSize | null>;
 
@@ -23,9 +23,6 @@ export class SignSizeComponent implements OnInit {
   }
 
   public updateSignSize() {
-    this.signInfosChanged.next({
-      ...this.sign,
-      size: this.signSizeControl.value!
-    })
+    this.sizeChanged.next(this.signSizeControl.value!)
   }
 }

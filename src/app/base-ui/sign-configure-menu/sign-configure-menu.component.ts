@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Sign } from '../../models/sign';
 
 @Component({
@@ -9,7 +9,4 @@ import { Sign } from '../../models/sign';
 export class SignConfigureMenuComponent {
   @Input({ required: true })
   public sign!: Sign;
-
-  @Output()
-  public signChanged = new EventEmitter<Sign>();
 }

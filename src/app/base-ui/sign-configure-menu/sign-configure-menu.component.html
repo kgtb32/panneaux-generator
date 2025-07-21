@@ -1,8 +1,5 @@
-<app-sign-size
-  [sign]="sign"
-  (signInfosChanged)="signChanged.next($event)"
-></app-sign-size>
+<app-sign-size [sign]="sign" (sizeChanged)="sign.size = $event"></app-sign-size>
 <app-sign-type
   [sign]="sign"
-  (signInfosChanged)="signChanged.next($event)"
+  (signTypeChanged)="sign.type = $event"
 ></app-sign-type>

@@ -12,7 +12,7 @@ export class SignTypeComponent {
   sign!: Sign;
 
   @Output()
-  signInfosChanged = new EventEmitter<Sign>();
+  signTypeChanged = new EventEmitter<SignType>();
 
   public signTypeControl!: FormControl<SignType | null>;
 
@@ -23,9 +23,6 @@ export class SignTypeComponent {
   }
 
   public updateSignType() {
-    this.signInfosChanged.next({
-      ...this.sign,
-      type: this.signTypeControl.value!
-    })
+    this.signTypeChanged.next(this.signTypeControl.value!)
   }
 }
