@@ -3,10 +3,42 @@
   <div class="flex-1 overflow-auto">
     <app-base-sign [type]="sign.type" [size]="sign.size">
       <p>base-sign works!</p>
+      <app-road-identification
+        [roadIdentification]="{
+          type: 'A',
+          name: 'A-1',
+          hasToll: true
+        }"
+      ></app-road-identification>
+      <app-road-identification
+        [roadIdentification]="{
+          type: 'N',
+          name: 'N-1',
+          hasToll: true
+        }"
+      ></app-road-identification>
+      <app-road-identification
+        [roadIdentification]="{
+          type: 'IP',
+          name: 'IP-1',
+          hasToll: true
+        }"
+      ></app-road-identification>
+      <app-road-identification
+        [roadIdentification]="{
+          type: 'IC',
+          name: 'IC-1',
+          hasToll: true
+        }"
+      ></app-road-identification>
+      <app-road-identification
+        [roadIdentification]="{
+          type: 'LI',
+          name: 'LI-1',
+          hasToll: true
+        }"
+      ></app-road-identification>
     </app-base-sign>
   </div>
-  <app-sign-configure-menu
-    [sign]="sign"
-    (signChanged)="sign = $event"
-  ></app-sign-configure-menu>
+  <app-sign-configure-menu [sign]="sign"></app-sign-configure-menu>
 </div>

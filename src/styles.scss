@@ -10,6 +10,10 @@
   padding: 0px !important;
 }
 
+.p-1 {
+  padding: 0.25em;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -32,4 +36,8 @@
 
 .w-100 {
   width: 100%;
+}
+
+.w-fit-content {
+  width: fit-content;
 }

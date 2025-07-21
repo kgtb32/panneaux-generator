@@ -8,3 +8,9 @@ export interface Sign {
     size: SignSize
     type: SignType
 }
+
+export interface RoadIdentification {
+    type: SignType,
+    name: string
+    hasToll?: boolean
+}

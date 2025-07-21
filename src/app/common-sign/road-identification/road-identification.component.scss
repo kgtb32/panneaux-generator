@@ -1,0 +1,63 @@
+@import "../../styles/colors.scss";
+@import "../../styles/sizes.scss";
+
+.road-identification {
+  border: 2px solid;
+  border-radius: 0.25em;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+.has-toll {
+  padding-left: 0.5em;
+}
+
+.sign-type-a {
+  background-color: $identification-autoroute-bg;
+  color: $identification-autoroute-fg;
+  border-color: $identification-autoroute-fg;
+
+  .has-toll {
+    color: $toll;
+  }
+}
+
+.sign-type-n {
+  background-color: $identification-nationale-bg;
+  color: $identification-nationale-fg;
+  border-color: $identification-nationale-fg;
+
+  .has-toll {
+    color: $toll;
+  }
+}
+
+.sign-type-ip {
+  background-color: $identification-ip-bg;
+  color: $identification-ip-fg;
+  border-color: $identification-ip-fg;
+
+  .has-toll {
+    color: $toll;
+  }
+}
+
+.sign-type-ic {
+  background-color: $identification-ic-bg;
+  color: $identification-ic-fg;
+  border-color: $identification-ic-fg;
+
+  .has-toll {
+    color: $toll;
+  }
+}
+
+.sign-type-li {
+  background-color: $identification-li-bg;
+  color: $identification-li-fg;
+  border-color: $identification-li-fg;
+
+  .has-toll {
+    color: $toll-alt;
+  }
+}
