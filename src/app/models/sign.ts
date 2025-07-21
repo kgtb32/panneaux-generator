@@ -7,10 +7,15 @@ export type SignType = typeof signTypes[number];
 export interface Sign {
     size: SignSize
     type: SignType
+    parts: SignPart[]
 }
 
 export interface RoadIdentification {
     type: SignType,
     name: string
     hasToll?: boolean
+}
+
+export interface SignPart {
+    identification: RoadIdentification[]
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { BaseUiModule } from '../base-ui/base-ui.module';
 import { CommonSignModule } from "../common-sign/common-sign.module";
+import { RoadSignModule } from '../road-sign/road-sign.module';
 
 
 
@@ -13,7 +14,7 @@ import { CommonSignModule } from "../common-sign/common-sign.module";
   imports: [
     CommonModule,
     BaseUiModule,
-    CommonSignModule
+    RoadSignModule
   ]
 })
 export class HomeModule { }

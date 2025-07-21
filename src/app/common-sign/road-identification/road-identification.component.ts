@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RoadIdentification } from '../../models/sign';
 
 @Component({
@@ -6,13 +6,11 @@ import { RoadIdentification } from '../../models/sign';
   templateUrl: './road-identification.component.html',
   styleUrl: './road-identification.component.scss'
 })
-export class RoadIdentificationComponent implements OnChanges {
-  public classes: string[] = []
+export class RoadIdentificationComponent {
+  public get classes(): string[] {
+    return [`sign-type-${this.roadIdentification.type.toLowerCase()}`]
+  }
 
   @Input({ required: true })
   roadIdentification!: RoadIdentification
-
-  ngOnChanges(): void {
-    this.classes = [`sign-type-${this.roadIdentification.type.toLowerCase()}`]
-  }
 }

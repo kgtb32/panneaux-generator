@@ -9,8 +9,46 @@ import { Sign } from '../models/sign';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
   public sign: Sign = {
     size: 'M',
-    type: 'A'
+    type: 'A',
+    parts: [
+      {
+        identification: [
+          {
+            name: 'A-1',
+            type: "A",
+            hasToll: true,
+          },
+          {
+            name: 'N-1',
+            type: "N",
+          },
+          {
+            name: 'IC-2',
+            type: "IC",
+          },
+          {
+            name: 'IP-1',
+            type: "IP",
+          },
+          {
+            name: 'LRV-1',
+            type: "LI",
+          }
+        ]
+      },
+      {
+        identification: [
+          {
+            name: 'IP-2',
+            type: 'IP'
+          }
+        ],
+
+      }
+    ]
   }
+
 }
