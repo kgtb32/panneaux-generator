@@ -13,6 +13,13 @@ export class HomeComponent {
   public sign: Sign = {
     size: 'M',
     type: 'A',
+    identification: [
+      {
+        name: 'A-1',
+        type: "A",
+        hasToll: true,
+      },
+    ],
     parts: [
       {
         identification: [

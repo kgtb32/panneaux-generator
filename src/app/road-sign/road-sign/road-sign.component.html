@@ -1,5 +1,14 @@
 <app-base-sign [size]="this.sign.size" [type]="this.sign.type">
-  @for (part of this.sign.parts; track $index) {
-  <app-road-sign-part [signPart]="part"></app-road-sign-part>
-  }
+  <div class="d-flex flex-column gap-m">
+    <div class="d-flex justify-content-center gap-m">
+      @for (identification of sign.identification; track $index) {
+      <app-road-identification
+        [roadIdentification]="identification"
+      ></app-road-identification>
+      }
+    </div>
+    @for (part of this.sign.parts; track $index) {
+    <app-road-sign-part [signPart]="part"></app-road-sign-part>
+    }
+  </div>
 </app-base-sign>

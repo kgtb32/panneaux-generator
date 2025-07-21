@@ -8,6 +8,7 @@ export interface Sign {
     size: SignSize
     type: SignType
     parts: SignPart[]
+    identification: RoadIdentification[]
 }
 
 export interface RoadIdentification {

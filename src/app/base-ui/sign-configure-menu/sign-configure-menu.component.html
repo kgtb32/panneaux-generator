@@ -7,5 +7,9 @@
     [type]="sign.type"
     (signTypeChanged)="sign.type = $event"
   ></app-sign-type>
+  <p>Identifications du panneau</p>
+  <app-identification
+    [identifications]="sign.identification"
+  ></app-identification>
   <app-sign-part [sign]="sign"></app-sign-part>
 </div>
