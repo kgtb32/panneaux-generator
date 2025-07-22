@@ -1,0 +1,69 @@
+<p>Parties de panneau</p>
+<div class="tabs-vertical tabs-mini">
+  @if (sign.parts.length === 0) {
+  <p>Aucune partie de panneau.</p>
+  }
+  <p-tabs value="0">
+    <p-tablist>
+      @for (part of sign.parts; track $index) {
+      <p-tab [value]="$index">#{{ $index }}</p-tab>
+      }
+      <p-button
+        (onClick)="addSignPart()"
+        icon="pi pi-plus"
+        [raised]="true"
+        [text]="true"
+      />
+    </p-tablist>
+    <p-tabpanels>
+      @for (part of sign.parts; track $index) {
+      <p-tabpanel [value]="$index">
+        <p-panel header="Partie #{{ $index }}" class="m-0" styleClass="p-0">
+          <div class="d-flex gap-s">
+            <p class="my-auto">Identificateurs de route :</p>
+          </div>
+          <app-identification
+            [identifications]="part.identification"
+          ></app-identification>
+          <p>Position des identificateurs de route :</p>
+          <p-selectButton
+            [options]="identificationPositionOptions"
+            [(ngModel)]="part.identificationPosition"
+            (ngModelChange)="part.identificationPosition = $event"
+          >
+          </p-selectButton>
+          <app-sign-arrow-group
+            [arrowType]="part.leftArrowType!"
+            [enable]="part.leftArrow"
+            (enableChanged)="part.leftArrow = $event"
+            (arrowTypeChanged)="part.leftArrowType = $event"
+            direction="Gauche"
+          ></app-sign-arrow-group>
+          <app-sign-arrow-group
+            [arrowType]="part.rightArrowType!"
+            [enable]="part.rightArrow"
+            (enableChanged)="part.rightArrow = $event"
+            (arrowTypeChanged)="part.rightArrowType = $event"
+            direction="Droite"
+          ></app-sign-arrow-group>
+          <div class="d-flex gap-s">
+            <p class="my-auto">Directions :</p>
+          </div>
+          <app-sign-direction
+            [directions]="part.direction"
+          ></app-sign-direction>
+          <p-button
+            severity="danger"
+            icon="pi pi-trash"
+            styleClass="w-100"
+            class="w-100"
+            iconPos="right"
+            label="Supprimer"
+            (onClick)="deleteSignPart($index)"
+          ></p-button>
+        </p-panel>
+      </p-tabpanel>
+      }
+    </p-tabpanels>
+  </p-tabs>
+</div>

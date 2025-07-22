@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { definePreset } from '@primeng/themes';
-import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { providePrimeNG } from 'primeng/config';
 import { HomeModule } from './home/home.module';
 
 const color = "sky"
@@ -25,7 +25,7 @@ export const Preset = definePreset(Aura, {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

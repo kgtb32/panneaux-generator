@@ -1,0 +1,14 @@
+@if (showLabel) {
+<p>Type du panneau :</p>
+}
+<p-select
+  [options]="options"
+  [formControl]="this.signTypeControl"
+  (onChange)="this.updateSignType()"
+  styleClass="w-100"
+  optionLabel="label"
+  optionValue="value"
+  appendTo="body"
+  aria-labelledby="basic"
+>
+</p-select>

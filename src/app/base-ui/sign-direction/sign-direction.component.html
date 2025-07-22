@@ -1,0 +1,63 @@
+<p-table [value]="directions">
+  <ng-template #header>
+    <tr>
+      <th scope="col" class="p-0">Import.</th>
+      <th scope="col" class="p-0">Libelle</th>
+      <th scope="col" class="p-0">Icone</th>
+      <th scope="col" class="p-0">
+        <p-button
+          icon="pi pi-plus"
+          [raised]="true"
+          [text]="true"
+          (onClick)="addDirection()"
+        />
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-direction let-index="rowIndex">
+    <tr>
+      <td class="p-0" style="width: 3em">
+        <app-road-importance
+          [showLabel]="false"
+          [importance]="direction.importance"
+          (importanceChanged)="direction.importance = $event"
+        ></app-road-importance>
+      </td>
+      <td class="p-0">
+        <input class="w-100" pInputText [(ngModel)]="direction.label" />
+      </td>
+      <td class="p-0">
+        <p-multiselect
+          [options]="options"
+          [(ngModel)]="direction.icon"
+          optionLabel="label"
+          selectedItemsLabel=""
+          emptyMessage=""
+          appendTo="body"
+          optionValue="value"
+          styleClass="w-3-em"
+        >
+          <ng-template let-icon #item>
+            <div class="flex items-center gap-2">
+              <img
+                src="icons/img_{{ icon.value }}.gif"
+                width="20"
+                height="20"
+                alt="icone"
+              />
+            </div>
+          </ng-template>
+        </p-multiselect>
+      </td>
+      <td class="p-0">
+        <p-button
+          severity="danger"
+          icon="pi pi-trash"
+          (onClick)="deleteDirection(index)"
+          [raised]="true"
+          [text]="true"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

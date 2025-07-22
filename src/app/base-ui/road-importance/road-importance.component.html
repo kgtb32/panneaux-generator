@@ -1,0 +1,15 @@
+@if (showLabel) {
+<p>Importance de la route :</p>
+}
+<p-select
+  [options]="options"
+  styleClass="p-0 w-100"
+  class="p-0 mini-select"
+  [formControl]="this.roadImportanceControl"
+  (onChange)="this.updateImportance()"
+  optionLabel="label"
+  appendTo="body"
+  optionValue="value"
+  aria-labelledby="basic"
+>
+</p-select>

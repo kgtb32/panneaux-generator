@@ -1,0 +1,45 @@
+<div style="max-width: 20em">
+  <app-sign-size
+    [size]="sign.size"
+    (sizeChanged)="sign.size = $event"
+  ></app-sign-size>
+  <app-sign-type
+    [type]="sign.type"
+    (signTypeChanged)="sign.type = $event"
+  ></app-sign-type>
+  <p>Identifications du panneau</p>
+  <app-identification
+    [identifications]="sign.identification"
+  ></app-identification>
+  <p>Nombre de flèches en bas du panneau :</p>
+  <p-input-number
+    class="w-100"
+    min="0"
+    max="8"
+    [(ngModel)]="sign.bottomArrows"
+  ></p-input-number>
+  @if (sign.bottomArrows > 0) {
+  <app-sign-arrow
+    [arrow]="sign.bottomArrowsType"
+    (arrowChanged)="sign.bottomArrowsType = $event"
+  ></app-sign-arrow>
+  }
+  <p-divider></p-divider>
+  <app-sign-arrow-group
+    [arrowType]="sign.leftArrowType!"
+    [enable]="sign.leftArrow"
+    (enableChanged)="sign.leftArrow = $event"
+    (arrowTypeChanged)="sign.leftArrowType = $event"
+    direction="Gauche"
+  ></app-sign-arrow-group>
+  <p-divider></p-divider>
+  <app-sign-arrow-group
+    [arrowType]="sign.rightArrowType!"
+    [enable]="sign.rightArrow"
+    (enableChanged)="sign.rightArrow = $event"
+    (arrowTypeChanged)="sign.rightArrowType = $event"
+    direction="Droite"
+  ></app-sign-arrow-group>
+  <p-divider></p-divider>
+  <app-sign-part [sign]="sign"></app-sign-part>
+</div>

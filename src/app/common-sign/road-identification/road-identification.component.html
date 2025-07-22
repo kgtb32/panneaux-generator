@@ -1,0 +1,6 @@
+<div [ngClass]="this.classes" class="road-identification w-fit-content p-1">
+  <span>{{ this.roadIdentification.name }}</span>
+  @if (this.roadIdentification.hasToll) {
+  <span class="has-toll">€</span>
+  }
+</div>

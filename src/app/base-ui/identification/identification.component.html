@@ -1,0 +1,43 @@
+<p-table [value]="identifications">
+  <ng-template #header>
+    <tr>
+      <th scope="col" class="p-0">Type</th>
+      <th scope="col" class="p-0">Nom</th>
+      <th scope="col" class="p-0">€</th>
+      <th scope="col" class="p-0">
+        <p-button
+          icon="pi pi-plus"
+          [raised]="true"
+          [text]="true"
+          (onClick)="addIdentfication()"
+        />
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-identification let-index="rowIndex">
+    <tr>
+      <td class="p-0">
+        <app-sign-type
+          [showLabel]="false"
+          [type]="identification.type"
+          (signTypeChanged)="identification.type = $event"
+        ></app-sign-type>
+      </td>
+      <td class="p-0">
+        <input class="w-100" pInputText [(ngModel)]="identification.name" />
+      </td>
+      <td class="p-0">
+        <input type="checkbox" [(ngModel)]="identification.hasToll" />
+      </td>
+      <td class="p-0">
+        <p-button
+          severity="danger"
+          icon="pi pi-trash"
+          (onClick)="deleteIdentification(index)"
+          [raised]="true"
+          [text]="true"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

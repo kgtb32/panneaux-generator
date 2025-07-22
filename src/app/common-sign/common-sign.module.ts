@@ -1,0 +1,24 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BaseSignComponent } from './base-sign/base-sign.component';
+import { RoadIdentificationComponent } from './road-identification/road-identification.component';
+import { BasicArrowComponent } from './basic-arrow/basic-arrow.component';
+
+
+
+@NgModule({
+  declarations: [
+    BaseSignComponent,
+    RoadIdentificationComponent,
+    BasicArrowComponent
+  ],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    BaseSignComponent,
+    BasicArrowComponent,
+    RoadIdentificationComponent
+  ]
+})
+export class CommonSignModule { }
