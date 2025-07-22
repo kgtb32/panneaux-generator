@@ -32,6 +32,7 @@ export interface RoadIdentification {
 export interface RoadDirection {
     label: string;
     importance: RoadImportance
+    icon: string[];
 }
 
 export interface SignPart {

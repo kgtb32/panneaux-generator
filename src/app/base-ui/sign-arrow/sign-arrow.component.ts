@@ -33,7 +33,7 @@ export class SignArrowComponent {
   public readonly options = signArrows.map(arrow => ({ label: '', value: arrow, icon: this.arrowsIconCorrespondance[arrow] }))
 
   public ngOnInit(): void {
-    this.arrowControl = new FormControl<SignArrow>(this.arrow ?? 'BAS', [Validators.required])
+    this.arrowControl = new FormControl<SignArrow>(this.arrow!, [Validators.required])
   }
 
   public updateArrow() {

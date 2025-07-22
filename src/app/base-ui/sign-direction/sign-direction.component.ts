@@ -10,6 +10,10 @@ export class SignDirectionComponent {
   @Input()
   directions!: RoadDirection[];
 
+  private readonly icons = 111;
+
+  public readonly options = new Array(this.icons).fill(0).map((_, i) => ({ value: i + 1, label: i + 1 }))
+
   deleteDirection(i: number) {
     this.directions.splice(i, 1);
   }
@@ -17,7 +21,8 @@ export class SignDirectionComponent {
   addDirection() {
     this.directions.push({
       importance: 'S',
-      label: ''
+      label: '',
+      icon: [],
     })
   }
 }

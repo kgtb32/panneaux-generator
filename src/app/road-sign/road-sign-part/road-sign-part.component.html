@@ -24,13 +24,26 @@
     </div>
     <div class="d-flex flex-column">
       @for (direction of signPart.direction; track $index) {
-      <p
-        class="p-0 m-0 road-importance-{{
-          direction.importance.toLowerCase()
-        }} text-center flex-1"
-      >
-        {{ direction.label }}
-      </p>
+      <div class="d-flex flex-1 justify-content-center">
+        <div class="d-flex gap-s px-1">
+          @for (icon of direction.icon; track $index) {
+          <img
+            src="icons/img_{{ icon }}.gif"
+            class="my-auto"
+            height="50"
+            width="50"
+            alt=""
+          />
+          }
+        </div>
+        <p
+          class="p-0 m-0 road-importance-{{
+            direction.importance.toLowerCase()
+          }} text-center"
+        >
+          {{ direction.label }}
+        </p>
+      </div>
       }
     </div>
   </div>

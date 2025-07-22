@@ -3,7 +3,8 @@
 }
 <p-select
   [options]="options"
-  styleClass="w-100"
+  styleClass="p-0 w-100"
+  class="p-0 mini-select"
   [formControl]="this.roadImportanceControl"
   (onChange)="this.updateImportance()"
   optionLabel="label"

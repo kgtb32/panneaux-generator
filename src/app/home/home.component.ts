@@ -32,19 +32,23 @@ export class HomeComponent {
         direction: [
           {
             importance: 'XL',
-            label: "Aéroport du roi vert"
+            label: "Aéroport du roi vert",
+            icon: [],
           },
           {
             importance: 'L',
             label: 'Prison du Roi Vert',
+            icon: [],
           },
           {
             importance: 'M',
-            label: 'Le Roi Vert - Centre'
+            label: 'Le Roi Vert - Centre',
+            icon: [],
           },
           {
             importance: 'S',
-            label: 'Le Roi Rouge'
+            label: 'Le Roi Rouge',
+            icon: [],
           }
         ],
         identification: [
@@ -78,7 +82,8 @@ export class HomeComponent {
         direction: [
           {
             importance: 'XL',
-            label: 'Arébé'
+            label: 'Arébé',
+            icon: []
           }
         ],
         identification: [

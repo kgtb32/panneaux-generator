@@ -35,6 +35,11 @@
   padding-bottom: 0.25em;
 }
 
+.px-1 {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
 .p-1 {
   padding: 0.25em;
 }
@@ -113,6 +118,16 @@
 
   .p-tabpanels {
     padding: 0px !important;
+  }
+}
+
+.w-3-em {
+  width: 3em;
+}
+
+.mini-select {
+  .p-select-label {
+    padding: var(--p-select-padding-y) 0px;
   }
 }
 
