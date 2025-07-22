@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RoadSignComponent } from './road-sign/road-sign.component';
 import { CommonSignModule } from '../common-sign/common-sign.module';
 import { RoadSignPartComponent } from './road-sign-part/road-sign-part.component';
-
+import { DividerModule } from 'primeng/divider'
 
 
 @NgModule({
@@ -13,7 +13,8 @@ import { RoadSignPartComponent } from './road-sign-part/road-sign-part.component
   ],
   imports: [
     CommonModule,
-    CommonSignModule
+    CommonSignModule,
+    DividerModule
   ],
   exports: [
     RoadSignComponent,

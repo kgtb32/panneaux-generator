@@ -1,7 +1,30 @@
-<div class="d-flex gap-m">
-  @for (identification of signPart.identification; track $index) {
-  <app-road-identification
-    [roadIdentification]="identification"
-  ></app-road-identification>
-  }
+<div
+  class="d-flex gap-m justify-content-center"
+  [ngClass]="{
+    'flex-column': signPart.identificationPosition === 'HAUT'
+  }"
+>
+  <div
+    class="d-flex my-auto gap-m"
+    [ngClass]="{
+      'justify-content-center': signPart.identificationPosition === 'HAUT'
+    }"
+  >
+    @for (identification of signPart.identification; track $index) {
+    <app-road-identification
+      [roadIdentification]="identification"
+    ></app-road-identification>
+    }
+  </div>
+  <div class="d-flex flex-column">
+    @for (direction of signPart.direction; track $index) {
+    <p
+      class="p-0 m-0 road-importance-{{
+        direction.importance.toLowerCase()
+      }} text-center flex-1"
+    >
+      {{ direction.label }}
+    </p>
+    }
+  </div>
 </div>

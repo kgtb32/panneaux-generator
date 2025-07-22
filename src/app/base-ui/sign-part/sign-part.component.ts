@@ -12,7 +12,9 @@ export class SignPartComponent {
 
   public addSignPart() {
     this.sign.parts.push({
-      identification: []
+      identification: [],
+      direction: [],
+      identificationPosition: 'HAUT'
     })
   }
 }

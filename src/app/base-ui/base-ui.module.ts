@@ -19,6 +19,8 @@ import { Select, SelectModule } from "primeng/select";
 import { InputTextModule } from 'primeng/inputtext';
 import { Checkbox } from "primeng/checkbox";
 import { IdentificationComponent } from './identification/identification.component';
+import { SignDirectionComponent } from './sign-direction/sign-direction.component';
+import { RoadImportanceComponent } from './road-importance/road-importance.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { IdentificationComponent } from './identification/identification.compone
     SignSizeComponent,
     SignTypeComponent,
     SignPartComponent,
-    IdentificationComponent
+    IdentificationComponent,
+    SignDirectionComponent,
+    RoadImportanceComponent
   ],
   imports: [
     CommonModule,

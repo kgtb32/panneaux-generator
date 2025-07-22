@@ -1,0 +1,43 @@
+<p-table [value]="directions">
+  <ng-template #header>
+    <tr>
+      <th scope="col" class="p-0">Importance</th>
+      <th scope="col" class="p-0">Libelle</th>
+      <th scope="col" class="p-0">
+        <p-button
+          icon="pi pi-plus"
+          [raised]="true"
+          [text]="true"
+          (onClick)="addDirection()"
+        />
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template #body let-direction let-index="rowIndex">
+    <tr>
+      <td class="p-0">
+        <app-road-importance
+          [showLabel]="false"
+          [importance]="direction.importance"
+          (importanceChanged)="direction.importance = $event"
+        ></app-road-importance>
+      </td>
+      <td class="p-0">
+        <input
+          style="max-width: 7em"
+          pInputText
+          [(ngModel)]="direction.label"
+        />
+      </td>
+      <td class="p-0">
+        <p-button
+          severity="danger"
+          icon="pi pi-trash"
+          (onClick)="deleteDirection(index)"
+          [raised]="true"
+          [text]="true"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

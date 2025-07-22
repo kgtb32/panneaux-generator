@@ -1,5 +1,5 @@
 <app-base-sign [size]="this.sign.size" [type]="this.sign.type">
-  <div class="d-flex flex-column gap-m">
+  <div class="d-flex flex-column gap-m h-100">
     <div class="d-flex justify-content-center gap-m">
       @for (identification of sign.identification; track $index) {
       <app-road-identification
@@ -7,8 +7,11 @@
       ></app-road-identification>
       }
     </div>
-    @for (part of this.sign.parts; track $index) {
-    <app-road-sign-part [signPart]="part"></app-road-sign-part>
-    }
+    <div class="d-flex flex-column justify-content-center flex-1">
+      @for (part of this.sign.parts; track $index) {
+      <app-road-sign-part [signPart]="part"></app-road-sign-part>
+      }
+    </div>
+    <p-divider></p-divider>
   </div>
 </app-base-sign>

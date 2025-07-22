@@ -22,6 +22,25 @@ export class HomeComponent {
     ],
     parts: [
       {
+        identificationPosition: 'HAUT',
+        direction: [
+          {
+            importance: 'XL',
+            label: "Aéroport du roi vert"
+          },
+          {
+            importance: 'L',
+            label: 'Prison du Roi Vert',
+          },
+          {
+            importance: 'M',
+            label: 'Le Roi Vert - Centre'
+          },
+          {
+            importance: 'S',
+            label: 'Le Roi Rouge'
+          }
+        ],
         identification: [
           {
             name: 'A-1',
@@ -47,6 +66,13 @@ export class HomeComponent {
         ]
       },
       {
+        identificationPosition: 'COTE',
+        direction: [
+          {
+            importance: 'XL',
+            label: 'Arébé'
+          }
+        ],
         identification: [
           {
             name: 'IP-2',
