@@ -52,6 +52,15 @@
           <app-sign-direction
             [directions]="part.direction"
           ></app-sign-direction>
+          <p-button
+            severity="danger"
+            icon="pi pi-trash"
+            styleClass="w-100"
+            class="w-100"
+            iconPos="right"
+            label="Supprimer"
+            (onClick)="deleteSignPart($index)"
+          ></p-button>
         </p-panel>
       </p-tabpanel>
       }

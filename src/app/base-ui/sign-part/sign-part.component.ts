@@ -7,6 +7,7 @@ import { identificationModes, Sign } from '../../models/sign';
   styleUrl: './sign-part.component.scss'
 })
 export class SignPartComponent {
+
   @Input({ required: true })
   sign!: Sign
 
@@ -20,5 +21,9 @@ export class SignPartComponent {
       rightArrow: false,
       leftArrow: false
     })
+  }
+
+  deleteSignPart(i: number) {
+    this.sign.parts.splice(i, 1)
   }
 }
