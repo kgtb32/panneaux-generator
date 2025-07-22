@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Sign } from '../../models/sign';
+import { identificationModes, Sign } from '../../models/sign';
 
 @Component({
   selector: 'app-sign-part',
@@ -10,11 +10,15 @@ export class SignPartComponent {
   @Input({ required: true })
   sign!: Sign
 
+  public readonly identificationPositionOptions = identificationModes.map((val) => ({ value: val, label: val }))
+
   public addSignPart() {
     this.sign.parts.push({
       identification: [],
       direction: [],
-      identificationPosition: 'HAUT'
+      identificationPosition: 'COTE',
+      rightArrow: false,
+      leftArrow: false
     })
   }
 }

@@ -25,6 +25,27 @@
           <app-identification
             [identifications]="part.identification"
           ></app-identification>
+          <p>Position des identificateurs de route :</p>
+          <p-selectButton
+            [options]="identificationPositionOptions"
+            [(ngModel)]="part.identificationPosition"
+            (ngModelChange)="part.identificationPosition = $event"
+          >
+          </p-selectButton>
+          <app-sign-arrow-group
+            [arrowType]="part.leftArrowType!"
+            [enable]="part.leftArrow"
+            (enableChanged)="part.leftArrow = $event"
+            (arrowTypeChanged)="part.leftArrowType = $event"
+            direction="Gauche"
+          ></app-sign-arrow-group>
+          <app-sign-arrow-group
+            [arrowType]="part.rightArrowType!"
+            [enable]="part.rightArrow"
+            (enableChanged)="part.rightArrow = $event"
+            (arrowTypeChanged)="part.rightArrowType = $event"
+            direction="Droite"
+          ></app-sign-arrow-group>
           <div class="d-flex gap-s">
             <p class="my-auto">Directions :</p>
           </div>

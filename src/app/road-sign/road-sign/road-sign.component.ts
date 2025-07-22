@@ -9,4 +9,8 @@ import { Sign } from '../../models/sign';
 export class RoadSignComponent {
   @Input({ required: true })
   public sign!: Sign
+
+  public get arrowsIterator() {
+    return new Array(this.sign.bottomArrows).fill(0)
+  }
 }

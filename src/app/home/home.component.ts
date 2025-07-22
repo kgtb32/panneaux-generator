@@ -11,6 +11,10 @@ import { Sign } from '../models/sign';
 export class HomeComponent {
 
   public sign: Sign = {
+    bottomArrows: 2,
+    leftArrow: false,
+    rightArrow: false,
+    bottomArrowsType: 'BAS',
     size: 'M',
     type: 'A',
     identification: [
@@ -23,6 +27,8 @@ export class HomeComponent {
     parts: [
       {
         identificationPosition: 'HAUT',
+        leftArrow: false,
+        rightArrow: false,
         direction: [
           {
             importance: 'XL',
@@ -67,6 +73,8 @@ export class HomeComponent {
       },
       {
         identificationPosition: 'COTE',
+        rightArrow: false,
+        leftArrow: false,
         direction: [
           {
             importance: 'XL',

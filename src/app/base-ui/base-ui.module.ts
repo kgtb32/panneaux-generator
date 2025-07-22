@@ -21,6 +21,11 @@ import { Checkbox } from "primeng/checkbox";
 import { IdentificationComponent } from './identification/identification.component';
 import { SignDirectionComponent } from './sign-direction/sign-direction.component';
 import { RoadImportanceComponent } from './road-importance/road-importance.component';
+import { SignArrowComponent } from './sign-arrow/sign-arrow.component';
+import { CommonSignModule } from "../common-sign/common-sign.module";
+import { InputNumber, InputNumberModule } from "primeng/inputnumber";
+import { Divider, DividerModule } from "primeng/divider";
+import { SignArrowGroupComponent } from './sign-arrow-group/sign-arrow-group.component';
 
 
 @NgModule({
@@ -32,7 +37,9 @@ import { RoadImportanceComponent } from './road-importance/road-importance.compo
     SignPartComponent,
     IdentificationComponent,
     SignDirectionComponent,
-    RoadImportanceComponent
+    RoadImportanceComponent,
+    SignArrowComponent,
+    SignArrowGroupComponent
   ],
   imports: [
     CommonModule,
@@ -48,10 +55,15 @@ import { RoadImportanceComponent } from './road-importance/road-importance.compo
     SelectButtonModule,
     SelectModule,
     InputTextModule,
+    DividerModule,
+    InputNumberModule,
     FormsModule,
     ReactiveFormsModule,
     Select,
-    Checkbox
+    Checkbox,
+    CommonSignModule,
+    InputNumber,
+    Divider
   ],
   exports: [
     HeaderComponent,

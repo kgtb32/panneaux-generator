@@ -1,0 +1,14 @@
+<div class="d-flex">
+  <p>Fleche à {{ direction }} :</p>
+  <input
+    type="checkbox"
+    [(ngModel)]="enable"
+    (ngModelChange)="enableChanged.next($event)"
+  />
+</div>
+@if (enable) {
+<app-sign-arrow
+  [arrow]="arrowType"
+  (arrowChanged)="arrowTypeChanged.next($event)"
+></app-sign-arrow>
+}
