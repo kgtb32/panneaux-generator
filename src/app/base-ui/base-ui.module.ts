@@ -26,7 +26,8 @@ import { SignDirectionComponent } from './sign-direction/sign-direction.componen
 import { SignPartComponent } from './sign-part/sign-part.component';
 import { SignSizeComponent } from './sign-size/sign-size.component';
 import { SignTypeComponent } from './sign-type/sign-type.component';
-import { MultiSelectModule } from 'primeng/multiselect'
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ZoomComponent } from './zoom/zoom.component'
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MultiSelectModule } from 'primeng/multiselect'
     RoadImportanceComponent,
     SignArrowComponent,
     SignArrowGroupComponent,
+    ZoomComponent,
   ],
   imports: [
     CommonModule,
@@ -68,7 +70,8 @@ import { MultiSelectModule } from 'primeng/multiselect'
   ],
   exports: [
     HeaderComponent,
-    SignConfigureMenuComponent
+    SignConfigureMenuComponent,
+    ZoomComponent
   ]
 })
 export class BaseUiModule { }

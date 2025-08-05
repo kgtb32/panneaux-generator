@@ -2,10 +2,15 @@ import { EventEmitter } from "@angular/core";
 import { MenuItem } from "primeng/api";
 import html2canvas from 'html2canvas'
 
+const DOM_STYLE = "style";
+
 function exportToPng() {
     const divElement = document.getElementById("sign");
+    const style: Attr = divElement?.attributes.getNamedItem(DOM_STYLE)!;
+    divElement?.attributes.removeNamedItem(DOM_STYLE);
 
     html2canvas(divElement!).then((canvas) => {
+        divElement?.attributes.setNamedItem(style);
         const imgData = canvas.toDataURL("image/png");
 
         const link = document.createElement("a");

@@ -2,8 +2,24 @@
 @use "./app/styles/sizes.scss" as sizes;
 @import "primeicons/primeicons.css";
 
+body {
+  margin: 0px;
+}
+
 .b-none {
   border: none !important;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.w-100vh {
+  width: 100vw;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .m-0 {

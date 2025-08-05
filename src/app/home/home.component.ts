@@ -10,6 +10,8 @@ import { Sign } from '../models/sign';
 })
 export class HomeComponent {
 
+  public zoom: number = 100;
+
   public sign: Sign = {
     bottomArrows: 2,
     leftArrow: false,
@@ -96,5 +98,4 @@ export class HomeComponent {
       }
     ]
   }
-
 }

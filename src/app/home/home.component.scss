@@ -1,0 +1,15 @@
+.zoom-items {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  background: white;
+  padding: 0.25em;
+  opacity: 0.2;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+.zoom-items:hover {
+  opacity: 1;
+  transition-duration: 0.2s;
+}
