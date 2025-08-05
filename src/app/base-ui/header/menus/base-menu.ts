@@ -1,5 +1,20 @@
 import { EventEmitter } from "@angular/core";
 import { MenuItem } from "primeng/api";
+import html2canvas from 'html2canvas'
+
+function exportToPng() {
+    const divElement = document.getElementById("sign");
+
+    html2canvas(divElement!).then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+
+        const link = document.createElement("a");
+        link.href = imgData;
+        link.download = "div_image.png";
+        link.click();
+    });
+
+}
 
 export function baseMenu(output: EventEmitter<string>): MenuItem[] {
     return [
@@ -25,7 +40,7 @@ export function baseMenu(output: EventEmitter<string>): MenuItem[] {
                 {
                     icon: 'pi pi-file-export',
                     label: 'Exporter le panneau',
-                    command: () => output.next("file.export")
+                    command: () => exportToPng()
                 }
             ]
         },
