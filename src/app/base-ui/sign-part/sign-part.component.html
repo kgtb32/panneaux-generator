@@ -3,7 +3,7 @@
   @if (sign.parts.length === 0) {
   <p>Aucune partie de panneau.</p>
   }
-  <p-tabs value="0">
+  <p-tabs [value]="0">
     <p-tablist>
       @for (part of sign.parts; track $index) {
       <p-tab [value]="$index">#{{ $index }}</p-tab>
