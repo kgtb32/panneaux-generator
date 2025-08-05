@@ -1,4 +1,11 @@
-<div id="sign" class="w-fit-content" style="background: transparent">
+<div
+  id="sign"
+  class="w-fit-content"
+  style="background: transparent"
+  [ngStyle]="{
+    zoom: zoom
+  }"
+>
   <app-base-sign [size]="this.sign.size" [type]="this.sign.type">
     <div class="d-flex gap-m h-100 w-100">
       @if (sign.leftArrow && sign.leftArrowType) {
