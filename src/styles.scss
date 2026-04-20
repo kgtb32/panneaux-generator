@@ -1,5 +1,5 @@
-@use "./app/styles/colors.scss" as colors;
-@use "./app/styles/sizes.scss" as sizes;
+@import "./app/styles/colors.scss";
+@import "./app/styles/sizes.scss";
 @import "primeicons/primeicons.css";
 
 body {
@@ -54,6 +54,15 @@ body {
 .px-1 {
   padding-left: 0.25em;
   padding-right: 0.25em;
+}
+
+.px-3{
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.flex-center{
+  justify-content: center;
 }
 
 .p-1 {
@@ -145,6 +154,10 @@ body {
   .p-select-label {
     padding: var(--p-select-padding-y) 0px;
   }
+}
+
+.text-black{
+  color: $base-color;
 }
 
 .flex-column {

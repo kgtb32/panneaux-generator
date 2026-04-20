@@ -1,0 +1,47 @@
+<div class="d-flex gap-s">
+  <img src="sign_generator.webp" alt="app-icon" height="50em" />
+  <div class="flex-1 my-auto">
+    <h3 class="p-0 text-center m-0">Panneaux Generator</h3>
+    <h4 class="p-0 text-center m-0">
+      Version : <b>{{ version }}</b>
+    </h4>
+  </div>
+</div>
+@if (changelogs$ | async; as changelog) {
+  <br />
+  <h3>Changements :</h3>
+  <p-table
+    [value]="changelog"
+    [paginator]="changelog.length > 5"
+    stripedRows
+    [rows]="5"
+  >
+    <ng-template #header>
+      <tr>
+        <th>Version</th>
+        <th>Changements</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-changeInfo>
+      <tr>
+        <td>{{ changeInfo.version }}</td>
+        <td>
+          <ul>
+            @for (change of changeInfo.changes; track $index) {
+              <li>{{ change }}</li>
+            }
+          </ul>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+}
+<br />
+<div class="d-flex gap-s flex-center">
+  <a [href]="links.github" target="_blank" class="text-black">
+    <i class="pi pi-github" style="font-size: 2rem"></i>
+  </a>
+  <a [href]="links.linkedin" target="_blank" class="text-black">
+    <i class="pi pi-linkedin" style="font-size: 2rem"></i>
+  </a>
+</div>

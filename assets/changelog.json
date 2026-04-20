@@ -1,0 +1,18 @@
+[
+    {
+        "version": "1.0.1",
+        "changes": [
+            "Added About dialog box",
+            "Refactored header actions to improve readability"
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "changes": [
+            "Added base UI",
+            "Added base sign generation service",
+            "Added sign export (PNG)",
+            "Added base sign configurator UI"
+        ]
+    }
+]

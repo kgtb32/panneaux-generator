@@ -8,42 +8,42 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { definePreset } from '@primeng/themes';
 import Aura from '@primeng/themes/aura';
 import { providePrimeNG } from 'primeng/config';
+import { DialogService } from 'primeng/dynamicdialog';
 import { HomeModule } from './home/home.module';
+import { provideHttpClient } from '@angular/common/http';
 
-const color = "sky"
+const color = 'sky';
 
-const semanticValues = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
+const semanticValues = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
 
 export const Preset = definePreset(Aura, {
   semantic: {
     primary: Object.fromEntries(
-      semanticValues.map(semanticValue => ([semanticValue, `{${color}.${semanticValue}}`]))
-    )
-  }
+      semanticValues.map((semanticValue) => [
+        semanticValue,
+        `{${color}.${semanticValue}}`,
+      ]),
+    ),
+  },
 });
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HomeModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HomeModule],
   providers: [
+    DialogService,
     provideAnimationsAsync(),
+    provideHttpClient(),
     providePrimeNG({
       ripple: true,
       theme: {
         options: {
-          darkModeSelector: '.dark-mode'
+          darkModeSelector: '.dark-mode',
         },
-        preset: Preset
-      }
-    })
+        preset: Preset,
+      },
+    }),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
