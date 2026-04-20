@@ -1,5 +1,11 @@
 [
     {
+        "version": "1.0.2",
+        "changes": [
+            "Fixed changelog appearance on deployed env"
+        ]
+    },
+    {
         "version": "1.0.1",
         "changes": [
             "Added About dialog box",
