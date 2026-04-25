@@ -1,7 +1,10 @@
 [
   {
     "version": "1.0.3",
-    "changes": ["Fixed changelog cache issues"]
+    "changes": [
+      "Fixed changelog cache issues",
+      "Added multiple sign capabilities (Tabs)"
+    ]
   },
   {
     "version": "1.0.2",
