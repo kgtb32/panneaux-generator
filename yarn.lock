@@ -5040,6 +5040,11 @@ nanoid@^3.3.7:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.8.tgz#b1be3030bee36aaff18bacb375e5cce521684baf"
   integrity sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==
 
+nanoid@^5.1.9:
+  version "5.1.9"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.1.9.tgz#aac959acf7d685269fb1be7f70a90d9db0848948"
+  integrity sha512-ZUvP7KeBLe3OZ1ypw6dI/TzYJuvHP77IM4Ry73waSQTLn8/g8rpdjfyVAh7t1/+FjBtG4lCP42MEbDxOsRpBMw==
+
 needle@^3.1.0:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/needle/-/needle-3.3.1.tgz#63f75aec580c2e77e209f3f324e2cdf3d29bd049"
