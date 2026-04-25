@@ -3,7 +3,8 @@
     "version": "1.0.3",
     "changes": [
       "Fixed changelog cache issues",
-      "Added multiple sign capabilities (Tabs)"
+      "Added multiple sign capabilities (Tabs)",
+      "Updated Angular to V21"
     ]
   },
   {
