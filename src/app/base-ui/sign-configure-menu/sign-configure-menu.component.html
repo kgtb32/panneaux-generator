@@ -14,15 +14,15 @@
   <p>Nombre de flèches en bas du panneau :</p>
   <p-input-number
     class="w-100"
-    min="0"
-    max="8"
+    [min]="0"
+    [max]="8"
     [(ngModel)]="sign.bottomArrows"
   ></p-input-number>
   @if (sign.bottomArrows > 0) {
-  <app-sign-arrow
-    [arrow]="sign.bottomArrowsType"
-    (arrowChanged)="sign.bottomArrowsType = $event"
-  ></app-sign-arrow>
+    <app-sign-arrow
+      [arrow]="sign.bottomArrowsType"
+      (arrowChanged)="sign.bottomArrowsType = $event"
+    ></app-sign-arrow>
   }
   <p-divider></p-divider>
   <app-sign-arrow-group
