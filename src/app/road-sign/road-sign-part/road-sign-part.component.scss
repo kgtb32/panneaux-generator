@@ -1,17 +1,17 @@
-@import "../../styles/sizes.scss";
+@use "../../styles/sizes.scss";
 
 .road-importance-s {
-  font-size: $road-importance-s;
+  font-size: sizes.$road-importance-s;
 }
 
 .road-importance-m {
-  font-size: $road-importance-m;
+  font-size: sizes.$road-importance-m;
 }
 
 .road-importance-l {
-  font-size: $road-importance-l;
+  font-size: sizes.$road-importance-l;
 }
 
 .road-importance-xl {
-  font-size: $road-importance-xl;
+  font-size: sizes.$road-importance-xl;
 }
