@@ -1,0 +1,71 @@
+<p-confirmpopup />
+<p-tabs [value]="selected" class="h-100">
+  <p-tablist>
+    <div class="d-flex w-100">
+      <div class="flex-1 d-flex">
+        @for (sign of signs; track $index) {
+          <div class="d-flex gap-s">
+            <p-tab [value]="$index">
+              @switch (sign.state) {
+                @case ("UNSAVED") {
+                  <span>*</span>
+                }
+                @case ("SAVED") {
+                  <span>✓</span>
+                }
+                @case ("EXPORTED") {
+                  <span>E</span>
+                }
+              }
+
+              <span>Panneau #{{ $index + 1 }}</span>
+            </p-tab>
+            <p-button
+              [disabled]="signs.length <= 1"
+              icon="pi pi-times"
+              (onClick)="askForDelete($index, $event)"
+              severity="danger"
+              size="small"
+              class="my-auto"
+            />
+          </div>
+        }
+      </div>
+      <div class="h-100 d-flex px-1">
+        <p-button
+          icon="pi pi-plus"
+          (onClick)="add()"
+          size="small"
+          class="my-auto"
+        />
+      </div>
+    </div>
+  </p-tablist>
+  <p-tabpanels class="overflow-auto p-1">
+    @for (sign of signs; track $index) {
+      <p-tabpanel [value]="$index">
+        <div class="d-flex w-100 h-100">
+          <div class="flex-1 overflow-auto h-100">
+            <div class="flex-1">
+              <app-road-sign
+                [sign]="sign.sign"
+                [zoom]="this.zoom.toString() + '%'"
+              ></app-road-sign>
+            </div>
+            <div class="zoom-items">
+              <app-zoom
+                (zoomChange)="this.zoom = $event"
+                [zoom]="zoom"
+              ></app-zoom>
+            </div>
+          </div>
+          <div class="h-100 overflow-auto px-1">
+            <app-sign-configure-menu
+              [sign]="sign.sign"
+            ></app-sign-configure-menu>
+          </div>
+        </div>
+      </p-tabpanel>
+    }
+  </p-tabpanels>
+</p-tabs>
