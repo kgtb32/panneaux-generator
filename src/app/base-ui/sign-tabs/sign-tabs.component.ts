@@ -41,13 +41,13 @@ export class SignTabsComponent {
       target: event.target!,
       message: 'Êtes vous sûr de vouloir supprimer ce panneau',
       icon: 'pi pi-exclamation-triangle',
+      acceptLabel: 'Oui',
+      rejectLabel: 'Non',
       rejectButtonProps: {
-        label: ' Non',
         severity: 'secondary',
         outlined: true,
       },
       acceptButtonProps: {
-        label: 'Oui',
         severity: 'danger',
       },
       accept: () => {
