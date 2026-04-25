@@ -1,5 +1,5 @@
-@import "./app/styles/colors.scss";
-@import "./app/styles/sizes.scss";
+@use "app/styles/colors.scss";
+@use "app/styles/sizes.scss";
 @import "primeicons/primeicons.css";
 
 body {
@@ -157,7 +157,7 @@ body {
 }
 
 .text-black {
-  color: $base-color;
+  color: colors.$base-color;
 }
 
 .flex-column {

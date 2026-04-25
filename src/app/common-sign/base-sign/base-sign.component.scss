@@ -1,5 +1,5 @@
-@import "../../styles/colors.scss";
-@import "../../styles/sizes.scss";
+@use "../../styles/colors.scss";
+@use "../../styles/sizes.scss";
 
 .sign-parent {
   border: 2px solid;
@@ -14,71 +14,71 @@
 }
 
 .sign-type-a {
-  background-color: $base-sign-autoroute-bg;
-  color: $base-sign-autoroute-fg;
-  border-color: $base-sign-autoroute-fg;
+  background-color: colors.$base-sign-autoroute-bg;
+  color: colors.$base-sign-autoroute-fg;
+  border-color: colors.$base-sign-autoroute-fg;
 }
 
 .sign-type-a-base {
-  border-color: $base-sign-autoroute-bg;
-  background: $base-sign-autoroute-fg;
+  border-color: colors.$base-sign-autoroute-bg;
+  background: colors.$base-sign-autoroute-fg;
 }
 
 .sign-type-n {
-  background-color: $base-sign-nationale-bg;
-  color: $base-sign-nationale-fg;
-  border-color: $base-sign-nationale-fg;
+  background-color: colors.$base-sign-nationale-bg;
+  color: colors.$base-sign-nationale-fg;
+  border-color: colors.$base-sign-nationale-fg;
 }
 
 .sign-type-n-base {
-  border-color: $base-sign-nationale-bg;
-  background: $base-sign-nationale-fg;
+  border-color: colors.$base-sign-nationale-bg;
+  background: colors.$base-sign-nationale-fg;
 }
 
 .sign-type-ip {
-  background-color: $base-sign-ip-bg;
-  color: $base-sign-ip-fg;
-  border-color: $base-sign-ip-fg;
+  background-color: colors.$base-sign-ip-bg;
+  color: colors.$base-sign-ip-fg;
+  border-color: colors.$base-sign-ip-fg;
 }
 
 .sign-type-ip-base {
-  border-color: $base-sign-ip-bg;
-  background: $base-sign-ip-fg;
+  border-color: colors.$base-sign-ip-bg;
+  background: colors.$base-sign-ip-fg;
 }
 
 .sign-type-ic {
-  background-color: $base-sign-ic-bg;
-  color: $base-sign-ic-fg;
-  border-color: $base-sign-ic-fg;
+  background-color: colors.$base-sign-ic-bg;
+  color: colors.$base-sign-ic-fg;
+  border-color: colors.$base-sign-ic-fg;
 }
 
 .sign-type-ic-base {
-  border-color: $base-sign-ic-bg;
-  background: $base-sign-ic-fg;
+  border-color: colors.$base-sign-ic-bg;
+  background: colors.$base-sign-ic-fg;
 }
 
 .sign-type-li {
-  background-color: $base-sign-li-bg;
-  color: $base-sign-li-fg;
-  border-color: $base-sign-li-fg;
+  background-color: colors.$base-sign-li-bg;
+  color: colors.$base-sign-li-fg;
+  border-color: colors.$base-sign-li-fg;
 }
 
 .sign-type-li-base {
-  border-color: $base-sign-li-bg;
-  background: $base-sign-li-fg;
+  border-color: colors.$base-sign-li-bg;
+  background: colors.$base-sign-li-fg;
 }
 
 .sign-size-s {
-  width: $sign-s-width;
-  height: $sign-s-height;
+  width: sizes.$sign-s-width;
+  height: sizes.$sign-s-height;
 }
 
 .sign-size-m {
-  width: $sign-m-width;
-  height: $sign-m-height;
+  width: sizes.$sign-m-width;
+  height: sizes.$sign-m-height;
 }
 
 .sign-size-l {
-  width: $sign-l-width;
-  height: $sign-l-height;
+  width: sizes.$sign-l-width;
+  height: sizes.$sign-l-height;
 }

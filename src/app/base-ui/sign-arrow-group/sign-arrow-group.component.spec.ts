@@ -8,8 +8,8 @@ describe('SignArrowGroupComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignArrowGroupComponent]
-    })
+    imports: [SignArrowGroupComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(SignArrowGroupComponent);

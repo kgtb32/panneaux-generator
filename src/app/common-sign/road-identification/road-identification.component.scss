@@ -1,5 +1,5 @@
-@import "../../styles/colors.scss";
-@import "../../styles/sizes.scss";
+@use "../../styles/colors.scss";
+@use "../../styles/sizes.scss";
 
 .road-identification {
   border: 2px solid;
@@ -13,51 +13,51 @@
 }
 
 .sign-type-a {
-  background-color: $identification-autoroute-bg;
-  color: $identification-autoroute-fg;
-  border-color: $identification-autoroute-fg;
+  background-color: colors.$identification-autoroute-bg;
+  color: colors.$identification-autoroute-fg;
+  border-color: colors.$identification-autoroute-fg;
 
   .has-toll {
-    color: $toll;
+    color: colors.$toll;
   }
 }
 
 .sign-type-n {
-  background-color: $identification-nationale-bg;
-  color: $identification-nationale-fg;
-  border-color: $identification-nationale-fg;
+  background-color: colors.$identification-nationale-bg;
+  color: colors.$identification-nationale-fg;
+  border-color: colors.$identification-nationale-fg;
 
   .has-toll {
-    color: $toll;
+    color: colors.$toll;
   }
 }
 
 .sign-type-ip {
-  background-color: $identification-ip-bg;
-  color: $identification-ip-fg;
-  border-color: $identification-ip-fg;
+  background-color: colors.$identification-ip-bg;
+  color: colors.$identification-ip-fg;
+  border-color: colors.$identification-ip-fg;
 
   .has-toll {
-    color: $toll;
+    color: colors.$toll;
   }
 }
 
 .sign-type-ic {
-  background-color: $identification-ic-bg;
-  color: $identification-ic-fg;
-  border-color: $identification-ic-fg;
+  background-color: colors.$identification-ic-bg;
+  color: colors.$identification-ic-fg;
+  border-color: colors.$identification-ic-fg;
 
   .has-toll {
-    color: $toll;
+    color: colors.$toll;
   }
 }
 
 .sign-type-li {
-  background-color: $identification-li-bg;
-  color: $identification-li-fg;
-  border-color: $identification-li-fg;
+  background-color: colors.$identification-li-bg;
+  color: colors.$identification-li-fg;
+  border-color: colors.$identification-li-fg;
 
   .has-toll {
-    color: $toll-alt;
+    color: colors.$toll-alt;
   }
 }

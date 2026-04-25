@@ -7,17 +7,15 @@ import { DividerModule } from 'primeng/divider'
 
 
 @NgModule({
-  declarations: [
-    RoadSignComponent,
-    RoadSignPartComponent
-  ],
-  imports: [
-    CommonModule,
-    CommonSignModule,
-    DividerModule
-  ],
-  exports: [
-    RoadSignComponent,
-  ]
+    imports: [
+        CommonModule,
+        CommonSignModule,
+        DividerModule,
+        RoadSignComponent,
+        RoadSignPartComponent
+    ],
+    exports: [
+        RoadSignComponent,
+    ]
 })
 export class RoadSignModule { }

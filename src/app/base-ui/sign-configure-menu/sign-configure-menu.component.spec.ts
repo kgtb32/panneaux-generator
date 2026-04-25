@@ -8,8 +8,8 @@ describe('SignConfigureMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignConfigureMenuComponent]
-    })
+    imports: [SignConfigureMenuComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(SignConfigureMenuComponent);

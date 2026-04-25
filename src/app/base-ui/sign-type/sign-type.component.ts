@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignType, signTypes } from '../../models/sign';
+import { Select } from 'primeng/select';
 
 @Component({
-  selector: 'app-sign-type',
-  templateUrl: './sign-type.component.html',
-  styleUrl: './sign-type.component.scss'
+    selector: 'app-sign-type',
+    templateUrl: './sign-type.component.html',
+    styleUrl: './sign-type.component.scss',
+    imports: [Select, FormsModule, ReactiveFormsModule]
 })
 export class SignTypeComponent {
   @Input({ required: true })

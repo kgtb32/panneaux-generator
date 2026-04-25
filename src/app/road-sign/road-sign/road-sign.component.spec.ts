@@ -8,8 +8,8 @@ describe('RoadSignComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RoadSignComponent]
-    })
+    imports: [RoadSignComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(RoadSignComponent);

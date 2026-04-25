@@ -7,18 +7,16 @@ import { BasicArrowComponent } from './basic-arrow/basic-arrow.component';
 
 
 @NgModule({
-  declarations: [
-    BaseSignComponent,
-    RoadIdentificationComponent,
-    BasicArrowComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  exports: [
-    BaseSignComponent,
-    BasicArrowComponent,
-    RoadIdentificationComponent
-  ]
+    imports: [
+        CommonModule,
+        BaseSignComponent,
+        RoadIdentificationComponent,
+        BasicArrowComponent
+    ],
+    exports: [
+        BaseSignComponent,
+        BasicArrowComponent,
+        RoadIdentificationComponent
+    ]
 })
 export class CommonSignModule { }

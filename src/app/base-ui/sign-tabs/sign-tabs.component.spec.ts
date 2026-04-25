@@ -8,8 +8,8 @@ describe('SignTabsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [SignTabsComponent]
-    })
+    imports: [SignTabsComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(SignTabsComponent);
