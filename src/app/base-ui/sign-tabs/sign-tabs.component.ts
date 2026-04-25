@@ -11,10 +11,10 @@ import { ZoomComponent } from '../zoom/zoom.component';
 import { SignConfigureMenuComponent } from '../sign-configure-menu/sign-configure-menu.component';
 
 @Component({
-    selector: 'app-sign-tabs',
-    templateUrl: './sign-tabs.component.html',
-    styleUrls: ['./sign-tabs.component.scss'],
-    imports: [ConfirmPopup, Tabs, TabList, Ripple, Tab, Button, TabPanels, TabPanel, RoadSignComponent, ZoomComponent, SignConfigureMenuComponent]
+  selector: 'app-sign-tabs',
+  templateUrl: './sign-tabs.component.html',
+  styleUrls: ['./sign-tabs.component.scss'],
+  imports: [ConfirmPopup, Tabs, TabList, Ripple, Tab, Button, TabPanels, TabPanel, RoadSignComponent, ZoomComponent, SignConfigureMenuComponent]
 })
 export class SignTabsComponent {
   private readonly confirmationService = inject(ConfirmationService);
@@ -22,7 +22,7 @@ export class SignTabsComponent {
   public signs: SignTab[] = [
     {
       sign: window.structuredClone(DEFAULT_SIGN),
-      state: 'EXPORTED',
+      state: 'UNSAVED',
     },
   ];
   public zoom: number = 100;
