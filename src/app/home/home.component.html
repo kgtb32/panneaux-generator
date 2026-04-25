@@ -1,17 +1,6 @@
 <div class="d-flex flex-column h-100vh overflow-hidden">
   <app-header></app-header>
   <div class="d-flex flex-1 overflow-auto">
-    <div class="flex-1 overflow-auto h-100">
-      <app-road-sign
-        [sign]="sign"
-        [zoom]="this.zoom.toString() + '%'"
-      ></app-road-sign>
-      <div class="zoom-items">
-        <app-zoom (zoomChange)="this.zoom = $event" [zoom]="zoom"></app-zoom>
-      </div>
-    </div>
-    <div class="h-100 overflow-auto">
-      <app-sign-configure-menu [sign]="sign"></app-sign-configure-menu>
-    </div>
+    <app-sign-tabs class="w-100"></app-sign-tabs>
   </div>
 </div>

@@ -11,6 +11,7 @@ import { providePrimeNG } from 'primeng/config';
 import { DialogService } from 'primeng/dynamicdialog';
 import { HomeModule } from './home/home.module';
 import { provideHttpClient } from '@angular/common/http';
+import { ConfirmationService } from 'primeng/api';
 
 const color = 'sky';
 
@@ -31,6 +32,7 @@ export const Preset = definePreset(Aura, {
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, HomeModule],
   providers: [
+    ConfirmationService,
     DialogService,
     provideAnimationsAsync(),
     provideHttpClient(),
@@ -46,4 +48,4 @@ export const Preset = definePreset(Aura, {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
