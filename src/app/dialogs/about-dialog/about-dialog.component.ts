@@ -6,10 +6,10 @@ import env from '../../env/env';
 import { ChangelogService } from '../../services/header/changelog.service';
 
 @Component({
-    selector: 'app-about-dialog',
-    templateUrl: './about-dialog.component.html',
-    styleUrl: './about-dialog.component.scss',
-    imports: [AsyncPipe, TableModule]
+  selector: 'app-about-dialog',
+  templateUrl: './about-dialog.component.html',
+  styleUrls: [],
+  imports: [AsyncPipe, TableModule]
 })
 export class AboutDialogComponent {
   private readonly changelogService = inject(ChangelogService);
