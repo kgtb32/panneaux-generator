@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Button } from 'primeng/button';
 
 @Component({
     selector: 'app-zoom',
     templateUrl: './zoom.component.html',
     styleUrl: './zoom.component.scss',
-    standalone: false
+    imports: [Button]
 })
 export class ZoomComponent {
   @Input()

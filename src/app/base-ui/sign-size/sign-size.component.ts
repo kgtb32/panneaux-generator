@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Sign, SignSize, signSizes } from '../../models/sign';
-import { FormControl, Validators } from '@angular/forms'
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { Select } from 'primeng/select';
 
 @Component({
     selector: 'app-sign-size',
     templateUrl: './sign-size.component.html',
     styleUrl: './sign-size.component.scss',
-    standalone: false
+    imports: [Select, FormsModule, ReactiveFormsModule]
 })
 export class SignSizeComponent implements OnInit {
   @Input({ required: true })

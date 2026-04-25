@@ -4,8 +4,7 @@ import { SignArrow } from '../../models/sign';
 @Component({
     selector: 'app-basic-arrow',
     templateUrl: './basic-arrow.component.html',
-    styleUrl: './basic-arrow.component.scss',
-    standalone: false
+    styleUrl: './basic-arrow.component.scss'
 })
 export class BasicArrowComponent {
   @Input({ required: true })

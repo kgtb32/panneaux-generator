@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RoadImportance, roadImportances } from '../../models/sign';
+import { Select } from 'primeng/select';
 
 @Component({
     selector: 'app-road-importance',
     templateUrl: './road-importance.component.html',
     styleUrl: './road-importance.component.scss',
-    standalone: false
+    imports: [Select, FormsModule, ReactiveFormsModule]
 })
 export class RoadImportanceComponent {
   @Input()

@@ -7,12 +7,14 @@ import { MenuAction } from '../../models/action';
 import { AboutAction } from '../../services/header/actions/about.action';
 import { baseMenu } from './menus/base-menu';
 import { ExportSignAction } from '../../services/header/actions/export-sign.action';
+import { Toolbar } from 'primeng/toolbar';
+import { Menubar } from 'primeng/menubar';
 
 @Component({
-  selector: 'app-header',
-  standalone: false,
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss',
+    imports: [Toolbar, Menubar],
 })
 export class HeaderComponent implements OnInit {
   private readonly dialogService = inject(DialogService);

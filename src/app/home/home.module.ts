@@ -8,13 +8,11 @@ import { RoadSignModule } from '../road-sign/road-sign.module';
 
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
-  imports: [
-    CommonModule,
-    BaseUiModule,
-    RoadSignModule
-  ]
+    imports: [
+        CommonModule,
+        BaseUiModule,
+        RoadSignModule,
+        HomeComponent
+    ]
 })
 export class HomeModule { }

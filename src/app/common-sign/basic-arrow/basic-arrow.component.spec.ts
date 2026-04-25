@@ -8,8 +8,8 @@ describe('BasicArrowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BasicArrowComponent]
-    })
+    imports: [BasicArrowComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(BasicArrowComponent);

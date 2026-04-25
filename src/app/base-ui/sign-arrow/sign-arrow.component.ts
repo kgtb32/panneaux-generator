@@ -1,12 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignArrow, signArrows, SignSize, signSizes } from '../../models/sign';
+import { Select } from 'primeng/select';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-sign-arrow',
     templateUrl: './sign-arrow.component.html',
     styleUrl: './sign-arrow.component.scss',
-    standalone: false
+    imports: [Select, FormsModule, ReactiveFormsModule, NgClass]
 })
 export class SignArrowComponent {
   @Input()

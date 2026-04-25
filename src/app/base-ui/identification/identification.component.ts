@@ -1,11 +1,16 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RoadIdentification } from '../../models/sign';
+import { TableModule } from 'primeng/table';
+import { Button } from 'primeng/button';
+import { SignTypeComponent } from '../sign-type/sign-type.component';
+import { FormsModule } from '@angular/forms';
+import { InputText } from 'primeng/inputtext';
 
 @Component({
     selector: 'app-identification',
     templateUrl: './identification.component.html',
     styleUrl: './identification.component.scss',
-    standalone: false
+    imports: [TableModule, Button, SignTypeComponent, FormsModule, InputText]
 })
 export class IdentificationComponent {
   @Input({ required: true })
