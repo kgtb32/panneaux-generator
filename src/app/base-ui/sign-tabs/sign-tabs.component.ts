@@ -4,9 +4,10 @@ import { SignTab } from '../../models/sign-tab';
 import { ConfirmationService } from 'primeng/api';
 
 @Component({
-  selector: 'app-sign-tabs',
-  templateUrl: './sign-tabs.component.html',
-  styleUrls: ['./sign-tabs.component.scss'],
+    selector: 'app-sign-tabs',
+    templateUrl: './sign-tabs.component.html',
+    styleUrls: ['./sign-tabs.component.scss'],
+    standalone: false
 })
 export class SignTabsComponent {
   private readonly confirmationService = inject(ConfirmationService);

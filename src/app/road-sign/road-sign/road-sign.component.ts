@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { Sign } from '../../models/sign';
 
 @Component({
-  selector: 'app-road-sign',
-  templateUrl: './road-sign.component.html',
-  styleUrl: './road-sign.component.scss'
+    selector: 'app-road-sign',
+    templateUrl: './road-sign.component.html',
+    styleUrl: './road-sign.component.scss',
+    standalone: false
 })
 export class RoadSignComponent {
   @Input({ required: true })

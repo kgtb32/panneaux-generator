@@ -2,9 +2,10 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { SignSize, SignType } from '../../models/sign';
 
 @Component({
-  selector: 'app-base-sign',
-  templateUrl: './base-sign.component.html',
-  styleUrl: './base-sign.component.scss',
+    selector: 'app-base-sign',
+    templateUrl: './base-sign.component.html',
+    styleUrl: './base-sign.component.scss',
+    standalone: false
 })
 export class BaseSignComponent implements OnChanges {
   @Input({ required: true }) size: SignSize = 'S';

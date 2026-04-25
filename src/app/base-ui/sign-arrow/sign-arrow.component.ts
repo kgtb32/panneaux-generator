@@ -3,9 +3,10 @@ import { FormControl, Validators } from '@angular/forms';
 import { SignArrow, signArrows, SignSize, signSizes } from '../../models/sign';
 
 @Component({
-  selector: 'app-sign-arrow',
-  templateUrl: './sign-arrow.component.html',
-  styleUrl: './sign-arrow.component.scss'
+    selector: 'app-sign-arrow',
+    templateUrl: './sign-arrow.component.html',
+    styleUrl: './sign-arrow.component.scss',
+    standalone: false
 })
 export class SignArrowComponent {
   @Input()

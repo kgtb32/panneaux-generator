@@ -3,9 +3,10 @@ import { FormControl, Validators } from '@angular/forms';
 import { RoadImportance, roadImportances } from '../../models/sign';
 
 @Component({
-  selector: 'app-road-importance',
-  templateUrl: './road-importance.component.html',
-  styleUrl: './road-importance.component.scss'
+    selector: 'app-road-importance',
+    templateUrl: './road-importance.component.html',
+    styleUrl: './road-importance.component.scss',
+    standalone: false
 })
 export class RoadImportanceComponent {
   @Input()

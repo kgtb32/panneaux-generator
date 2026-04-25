@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { RoadDirection } from '../../models/sign';
 
 @Component({
-  selector: 'app-sign-direction',
-  templateUrl: './sign-direction.component.html',
-  styleUrl: './sign-direction.component.scss'
+    selector: 'app-sign-direction',
+    templateUrl: './sign-direction.component.html',
+    styleUrl: './sign-direction.component.scss',
+    standalone: false
 })
 export class SignDirectionComponent {
   @Input()

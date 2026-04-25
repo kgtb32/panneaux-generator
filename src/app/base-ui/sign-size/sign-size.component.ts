@@ -3,9 +3,10 @@ import { Sign, SignSize, signSizes } from '../../models/sign';
 import { FormControl, Validators } from '@angular/forms'
 
 @Component({
-  selector: 'app-sign-size',
-  templateUrl: './sign-size.component.html',
-  styleUrl: './sign-size.component.scss'
+    selector: 'app-sign-size',
+    templateUrl: './sign-size.component.html',
+    styleUrl: './sign-size.component.scss',
+    standalone: false
 })
 export class SignSizeComponent implements OnInit {
   @Input({ required: true })

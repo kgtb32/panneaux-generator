@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 import { identificationModes, Sign } from '../../models/sign';
 
 @Component({
-  selector: 'app-sign-part',
-  templateUrl: './sign-part.component.html',
-  styleUrl: './sign-part.component.scss'
+    selector: 'app-sign-part',
+    templateUrl: './sign-part.component.html',
+    styleUrl: './sign-part.component.scss',
+    standalone: false
 })
 export class SignPartComponent {
 

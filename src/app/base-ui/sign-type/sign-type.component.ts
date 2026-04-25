@@ -3,9 +3,10 @@ import { FormControl, Validators } from '@angular/forms';
 import { SignType, signTypes } from '../../models/sign';
 
 @Component({
-  selector: 'app-sign-type',
-  templateUrl: './sign-type.component.html',
-  styleUrl: './sign-type.component.scss'
+    selector: 'app-sign-type',
+    templateUrl: './sign-type.component.html',
+    styleUrl: './sign-type.component.scss',
+    standalone: false
 })
 export class SignTypeComponent {
   @Input({ required: true })

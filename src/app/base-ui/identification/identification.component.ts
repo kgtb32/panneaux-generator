@@ -2,9 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RoadIdentification } from '../../models/sign';
 
 @Component({
-  selector: 'app-identification',
-  templateUrl: './identification.component.html',
-  styleUrl: './identification.component.scss'
+    selector: 'app-identification',
+    templateUrl: './identification.component.html',
+    styleUrl: './identification.component.scss',
+    standalone: false
 })
 export class IdentificationComponent {
   @Input({ required: true })

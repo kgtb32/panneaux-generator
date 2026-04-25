@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-zoom',
-  templateUrl: './zoom.component.html',
-  styleUrl: './zoom.component.scss'
+    selector: 'app-zoom',
+    templateUrl: './zoom.component.html',
+    styleUrl: './zoom.component.scss',
+    standalone: false
 })
 export class ZoomComponent {
   @Input()
