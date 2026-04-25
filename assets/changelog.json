@@ -4,7 +4,8 @@
     "changes": [
       "Fixed changelog cache issues",
       "Added multiple sign capabilities (Tabs)",
-      "Updated Angular to V21"
+      "Updated Angular to V21",
+      "Added collapse button in sign configuration menu"
     ]
   },
   {
