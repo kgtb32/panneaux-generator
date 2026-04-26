@@ -31,9 +31,11 @@ import { SignSizeComponent } from './sign-size/sign-size.component';
 import { SignTabsComponent } from './sign-tabs/sign-tabs.component';
 import { SignTypeComponent } from './sign-type/sign-type.component';
 import { ZoomComponent } from './zoom/zoom.component';
+import { TextInputDialogComponent } from '../dialogs/text-input-dialog/text-input-dialog.component';
 
 @NgModule({
     imports: [
+        TextInputDialogComponent,
         CommonModule,
         ConfirmPopupModule,
         MultiSelectModule,

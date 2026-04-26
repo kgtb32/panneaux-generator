@@ -1,4 +1,5 @@
-<p-confirmpopup />
+<p-confirmpopup key="popup" />
+<p-confirmdialog key="dialog" />
 <p-tabs [value]="selected" class="h-100" [scrollable]="true">
   <p-tablist>
     <div class="d-flex w-100">
@@ -17,8 +18,11 @@
                   <span>E</span>
                 }
               }
-
-              <span>Panneau #{{ $index + 1 }}</span>
+              @if (!sign.name) {
+                <span>Panneau #{{ $index + 1 }}</span>
+              } @else {
+                <span>{{ sign.name }}</span>
+              }
             </p-tab>
             <p-button
               [disabled]="signs.length <= 1"
@@ -53,16 +57,13 @@
               ></app-road-sign>
             </div>
             <div class="zoom-items">
-              <app-zoom
-                (zoomChange)="this.zoom = $event"
-                [zoom]="zoom"
-              ></app-zoom>
+              <app-zoom (zoomChange)="this.zoom = $event" [zoom]="zoom">
+              </app-zoom>
             </div>
           </div>
           <div class="h-100 overflow-auto px-1">
-            <app-sign-configure-menu
-              [sign]="sign.sign"
-            ></app-sign-configure-menu>
+            <app-sign-configure-menu [sign]="sign.sign">
+            </app-sign-configure-menu>
           </div>
         </div>
       </p-tabpanel>

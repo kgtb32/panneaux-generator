@@ -9,19 +9,23 @@ import { baseMenu } from './menus/base-menu';
 import { ExportSignAction } from '../../services/header/actions/export-sign.action';
 import { Toolbar } from 'primeng/toolbar';
 import { Menubar } from 'primeng/menubar';
+import { SaveSignAction } from '../../services/header/actions/save.action';
+import { EventsService } from '../../services/events.service';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrl: './header.component.scss',
-    imports: [Toolbar, Menubar],
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
+  imports: [Toolbar, Menubar],
 })
 export class HeaderComponent implements OnInit {
   private readonly dialogService = inject(DialogService);
   private readonly destroyRef = inject(DestroyRef);
+  private readonly eventsService = inject(EventsService);
 
   private readonly actions: { [key: string]: MenuAction } = {
     'file.export': new ExportSignAction(),
+    'file.save': new SaveSignAction(this.eventsService),
     'app.about': new AboutAction(this.dialogService),
   };
 

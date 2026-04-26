@@ -1,0 +1,14 @@
+<div class="d-flex flex-column gap-m">
+  <p class="p-0 m-0 text-center">{{ data?.description ?? "" }}</p>
+  <input
+    pInputText
+    id="ask"
+    [placeholder]="data?.placeholder ?? 'Valeur'"
+    [(ngModel)]="value"
+  />
+  <div class="d-flex justify-content-center">
+    <p-button [disabled]="!value" (onClick)="validate()">
+      {{ data?.buttonLabel ?? "Valider" }}
+    </p-button>
+  </div>
+</div>
