@@ -89,29 +89,33 @@ export class SignTabsComponent implements OnInit {
   }
 
   private saveCurrentSign() {
-    this.dialogService
-      .open(TextInputDialogComponent, SIGN_TAB_FILENAME_DIALOG)
-      ?.onClose.pipe(
-        filter((res) => res !== null && res !== undefined),
-        switchMap((fileName) =>
-          this.signService
-            .saveSign(this.currentSign?.sign!, fileName, this.currentSign?.id)
-            .pipe(
-              takeUntilDestroyed(this.destroyRef),
-              map((id) => {
-                this.currentSign!.id = id;
-                this.currentSign!.state = 'SAVED';
-              }),
-              catchError((e) => {
-                this.confirmationService.confirm(
-                  generateUnifiedErrorMessage(e, 'dialog'),
-                );
-                this.currentSign!.state = 'UNSAVED';
-                return of(false);
-              }),
-            ),
-        ),
-      )
+    const isAlreadySaved = this.currentSign!.id;
+    const filename$ = isAlreadySaved
+      ? of(this.currentSign!.name)
+      : this.dialogService
+        .open(TextInputDialogComponent, SIGN_TAB_FILENAME_DIALOG)
+        ?.onClose.pipe(filter((res) => res !== null && res !== undefined));
+    filename$?.pipe(
+      switchMap((fileName) =>
+        this.signService
+          .saveSign(this.currentSign?.sign!, fileName, this.currentSign?.id)
+          .pipe(
+            takeUntilDestroyed(this.destroyRef),
+            map((id) => {
+              this.currentSign!.id = id;
+              this.currentSign!.state = 'SAVED';
+              this.currentSign!.name = fileName;
+            }),
+            catchError((e) => {
+              this.confirmationService.confirm(
+                generateUnifiedErrorMessage(e, 'dialog'),
+              );
+              this.currentSign!.state = 'UNSAVED';
+              return of(false);
+            }),
+          ),
+      ),
+    )
       .subscribe();
   }
 }

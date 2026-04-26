@@ -6,4 +6,5 @@ export interface SignTab {
     sign: Sign;
     state: SignTabState;
     id?: string;
+    name?: string;
 }

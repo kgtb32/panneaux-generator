@@ -18,8 +18,11 @@
                   <span>E</span>
                 }
               }
-
-              <span>Panneau #{{ $index + 1 }}</span>
+              @if (!sign.name) {
+                <span>Panneau #{{ $index + 1 }}</span>
+              } @else {
+                <span>{{ sign.name }}</span>
+              }
             </p-tab>
             <p-button
               [disabled]="signs.length <= 1"
